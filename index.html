@@ -1,0 +1,55 @@
+html><head>
+  <title>Coin Market Table</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Coin Market Table</h1>
+  <div>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button id="searchBtn">Search</button>
+    <button id="sortBtn">Sort</button>
+  </div>
+  <table id="table"><tr><th>Name</th><th>ID</th><th>Image</th><th>Symbol</th><th>Current Price</th><th>Total Volume</th></tr><tr><td>Bitcoin</td><td>bitcoin</td><td><img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"></td><td>btc</td><td>26666</td><td>9298255975</td></tr><tr><td>Ethereum</td><td>ethereum</td><td><img src="https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880"></td><td>eth</td><td>1821.68</td><td>4613135586</td></tr><tr><td>Tether</td><td>tether</td><td><img src="https://assets.coingecko.com/coins/images/325/large/Tether.png?1668148663"></td><td>usdt</td><td>1</td><td>9242714037</td></tr><tr><td>BNB</td><td>binancecoin</td><td><img src="https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png?1644979850"></td><td>bnb</td><td>304.5</td><td>438925150</td></tr><tr><td>USD Coin</td><td>usd-coin</td><td><img src="https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png?1547042389"></td><td>usdc</td><td>0.999819</td><td>2006981588</td></tr><tr><td>XRP</td><td>ripple</td><td><img src="https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1605778731"></td><td>xrp</td><td>0.470063</td><td>854518623</td></tr><tr><td>Cardano</td><td>cardano</td><td><img src="https://assets.coingecko.com/coins/images/975/large/cardano.png?1547034860"></td><td>ada</td><td>0.363251</td><td>154810757</td></tr><tr><td>Lido Staked Ether</td><td>staked-ether</td><td><img src="https://assets.coingecko.com/coins/images/13442/large/steth_logo.png?1608607546"></td><td>steth</td><td>1819.75</td><td>2248509</td></tr><tr><td>Dogecoin</td><td>dogecoin</td><td><img src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256"></td><td>doge</td><td>0.07145</td><td>145559147</td></tr><tr><td>Polygon</td><td>matic-network</td><td><img src="https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png?1624446912"></td><td>matic</td><td>0.918262</td><td>265460127</td></tr></table>
+
+  <script src="script.js"></script>
+
+
+<!-- Code injected by live-server -->
+<script>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+  (function () {
+    function refreshCSS() {
+      var sheets = [].slice.call(document.getElementsByTagName("link"));
+      var head = document.getElementsByTagName("head")[0];
+      for (var i = 0; i < sheets.length; ++i) {
+        var elem = sheets[i];
+        var parent = elem.parentElement || head;
+        parent.removeChild(elem);
+        var rel = elem.rel;
+        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+          var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+          elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+        }
+        parent.appendChild(elem);
+      }
+    }
+    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+    var address = protocol + window.location.host + window.location.pathname + '/ws';
+    var socket = new WebSocket(address);
+    socket.onmessage = function (msg) {
+      if (msg.data == 'reload') window.location.reload();
+      else if (msg.data == 'refreshcss') refreshCSS();
+    };
+    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+      console.log('Live reload enabled.');
+      sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+    }
+  })();
+}
+else {
+  console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
+</script>
+</body></html>
